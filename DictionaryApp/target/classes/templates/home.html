@@ -52,7 +52,7 @@
             <div class="col-5 bg-dark rounded m-auto" style="height: 30vh; overflow: auto"
                  >
                 <h3 class="mySticky bg-gray text-dark rounded"
-                    th:text="'French: ' + ${words.getSpanishWords().size()}"></h3></h3>
+                    th:text="'French: ' + ${words.getFrenchWords().size()}"></h3></h3>
                     <div class="mt-3 rounded badge-info" th:each="word : ${words.getFrenchWords()}">
                         <img class="mr-2" src="/img/french.png" alt="Flag" width="20px" height="20px">
                         <span th:text="${word.term} + ': ' + ${word.translation}" ></span>
@@ -71,7 +71,7 @@
             <div class="col-5 bg-dark rounded m-auto" style="height: 30vh; overflow: auto"
                  >
                 <h3 class="mySticky bg-gray text-dark rounded"
-                    th:text="'Italian: ' + ${words.getSpanishWords().size()}"></h3></h3>
+                    th:text="'Italian: ' + ${words.getItalianWords().size()}"></h3></h3>
                     <div class="mt-3 rounded badge-success" th:each="word : ${words.getItalianWords()}">
                         <img class="mr-2" src="/img/italian.png" alt="Flag" width="20px" height="20px">
                         <span th:text="${word.term} + ': ' + ${word.translation}" ></span>
