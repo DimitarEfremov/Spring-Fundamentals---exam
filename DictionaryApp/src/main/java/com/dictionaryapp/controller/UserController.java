@@ -69,8 +69,7 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ModelAndView register( @RequestParam("date")
-            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    public ModelAndView register(
             @ModelAttribute("userRegisterDTO") @Valid UserRegisterDTO userRegisterDTO,
             BindingResult bindingResult){
 

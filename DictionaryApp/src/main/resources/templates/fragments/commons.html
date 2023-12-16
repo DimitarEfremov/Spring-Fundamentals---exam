@@ -13,7 +13,6 @@
 <header >
 <!--        th:object="${}">-->
     <nav class="navbar navbar-expand-lg bg-nav rounded " >
-        <a class="nav-link my-text-color active h5 " th:if="${@loggedUser.isLogged}" th:href="@{/home}">Dictionary App</a>
         <a class="nav-link my-text-color active h5 " th:unless="${@loggedUser.isLogged}" th:href="@{/}">Dictionary App</a>
         <a class="nav-link my-text-color active h5 " th:if="${@loggedUser.isLogged}" th:href="@{/words/add}">Add Word</a>
 

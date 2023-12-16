@@ -5,12 +5,10 @@ import com.dictionaryapp.service.UserService;
 import com.dictionaryapp.service.WordService;
 import com.dictionaryapp.util.LoggedUser;
 import jakarta.validation.Valid;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -38,8 +36,9 @@ public class WordsController {
 
     @PostMapping("/words/add")
     public ModelAndView addWord(
-            @ModelAttribute("addWordDTO") @Valid AddWordDTO addWordDTO,
-            BindingResult bindingResult) {
+//          @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+          @ModelAttribute("addWordDTO") @Valid AddWordDTO addWordDTO,
+           BindingResult bindingResult) {
 
         if (!loggedUser.isLogged()) {
             return new ModelAndView("redirect:/");

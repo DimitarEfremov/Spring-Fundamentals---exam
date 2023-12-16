@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -27,7 +28,8 @@ public class AddWordDTO {
 
     @PastOrPresent(message = "The input date must be in the past or present")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date inputDate;
+//    пробвай с LocalDate
+    private LocalDate inputDate;
 
     @NotEmpty(message = "You must select a language")
     private String language;
